@@ -18,7 +18,7 @@ function getRandomPhraseAsArray(arr){
 function addPhraseToDisplay(arr){
     for(var i = 0; i < arr.length; i++){
         var li = document.createElement('li');
-        li.textContent = arr[i];
+        li.textContent = arr[i].toUpperCase();
         if(arr[i].match(/[a-z]/i)){
             li.className = 'letter';
         }
@@ -29,7 +29,7 @@ function checkLetter(letter){
     var elems = document.getElementsByClassName('letter');
     var counter = 0;
     for(var i = 0; i < elems.length; i++){
-        if(elems[i].textContent === letter){
+        if(elems[i].textContent === letter.toUpperCase()){
             elems[i].classList.add('show');
             counter++;
         }
